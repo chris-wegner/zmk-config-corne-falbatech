@@ -3,4 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+    # There is an issue with the commits on 2/12/2026, they disable bluetooth, battery and who knows what else. There's an open issue for it: https://github.com/zmkfirmware/zmk/issues/3234
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@ac7f75b8591d39aaf3b66b9d26f26c9ed921a009
+
